@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 variable "aws_region" {
   default = "us-east-1"
 }
@@ -33,3 +34,40 @@ variable "instance_names" {
   type    = list(string)
   default = ["master", "node1", "node2"]
 }
+=======
+variable "aws_region" {
+  default = "us-east-1"
+}
+
+variable "availability_zone" {
+  default = "us-east-1a"
+}
+
+variable "vpc_cidr" {
+  default = "172.31.0.0/16"
+}
+
+variable "subnet_cidr" {
+  default = "172.31.80.0/20"
+}
+
+variable "instance_type" {
+  default = "t2.micro"
+}
+
+variable "ami_id" {
+  description = "Amazon Linux AMI"
+  default     = "ami-0e449927258d45bc4"
+}
+
+variable "key_name" {
+  description = "Your AWS key pair name"
+  default     = ""
+  type        = string
+}
+
+variable "instance_names" {
+  type    = list(string)
+  default = ["master", "node1", "node2"]
+}
+>>>>>>> cf96b1381fffa43047bc10e1c82716d87a226ea6
