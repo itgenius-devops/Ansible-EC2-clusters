@@ -25,7 +25,7 @@ variable "ami_id" {
 
 variable "key_name" {
   description = "Your AWS key pair name"
-  default     = "ansible_key"
+  default     = "ansible_key"  // make sure to have SSH key mannually created from the console.
   type        = string
 }
 
