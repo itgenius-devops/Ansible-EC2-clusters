@@ -25,7 +25,7 @@ variable "ami_id" {
 
 variable "key_name" {
   description = "Your AWS key pair name"
-  default     = ""
+  default     = "ansible_key"
   type        = string
 }
 
