@@ -20,7 +20,7 @@ variable "instance_type" {
 
 variable "ami_id" {
   description = "Amazon Linux AMI"
-  default     = "ami-0e449927258d45bc4"
+  default     = "ami-000ec6c25978d5999"
 }
 
 variable "key_name" {
