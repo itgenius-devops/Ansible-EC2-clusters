@@ -1,0 +1,26 @@
+---
+- name: Create a file /tmp/devops.txt
+  file:
+    path: /tmp/devops.txt
+    state: touch
+
+- name: Add a line of text to the file
+  lineinfile:
+    path: /tmp/devops.txt
+    line: "This is my custom message."
+    create: yes
+
+- name: Create a directory /tmp/devops_folder
+  file:
+    path: /tmp/devops_folder
+    state: directory
+
+- name: Remove the file /tmp/devops.txt
+  file:
+    path: /tmp/devops.txt
+    state: absent
+
+- name: Remove the directory /tmp/devops_folder
+  file:
+    path: /tmp/devops_folder
+    state: absent

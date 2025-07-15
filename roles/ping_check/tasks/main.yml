@@ -1,0 +1,9 @@
+---
+- name: Ping the hosts
+  ping:
+
+- name: Check system uptime
+  shell: uptime
+
+- name: Check current user
+  shell: whoami
