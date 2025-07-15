@@ -1,6 +1,7 @@
-This Repo is designed to help learn and apply core Ansible concepts through practical, task-oriented examples. Each playbook addresses a specific system operation, structured in phases to guide you from initial server connectivity to complete system configuration and management.
+This repository is designed to help learn and apply core Ansible concepts through practical, task-oriented examples.
+Each playbook focuses on a specific system operation, providing a clear and structured approach to managing remote hosts using Ansible.
 
-
+```
 Ansible-playbooks/
 ├── inventory/hosts        
 ├── playbook-1-ping.yml
@@ -8,5 +9,4 @@ Ansible-playbooks/
 ├── playbook-3-users-packages.yml
 ├── playbook-4-services.yml
 ├── playbook-5-system-info.yml
-
-
+```
