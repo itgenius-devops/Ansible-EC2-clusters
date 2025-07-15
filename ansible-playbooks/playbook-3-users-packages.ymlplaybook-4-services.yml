@@ -1,0 +1,50 @@
+- name: Phase 3 & 4 - Manage users and install packages
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Create user 'solomon'
+      user:
+        name: solomon
+        state: present
+
+    - name: Create group 'devops'
+      group:
+        name: devops
+        state: present
+
+    - name: Remove user 'padikie'
+      user:
+        name: padikie
+        state: absent
+
+    - name: Enable nginx1 repo
+      command: amazon-linux-extras enable nginx1
+
+    - name: Clean yum metadata
+      command: yum clean metadata
+
+    - name: Install nginx
+      yum:
+        name: nginx
+        state: present
+
+    - name: Install htop
+      yum:
+        name: htop
+        state: latest
+
+    - name: Install git
+      yum:
+        name: git
+        state: present
+
+    - name: Install Java 17 (Amazon Corretto)
+      yum:
+        name: java-17-amazon-corretto-devel
+        state: present
+
+    - name: Install Docker
+      yum:
+        name: docker
+        state: present

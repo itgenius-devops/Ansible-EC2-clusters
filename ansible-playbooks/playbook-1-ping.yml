@@ -1,0 +1,13 @@
+- name: Phase 1 - Are you alive? (Ping check)
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Ping the nodes
+      ping:
+
+    - name: Check system uptime
+      shell: uptime
+
+    - name: Check current user
+      shell: whoami

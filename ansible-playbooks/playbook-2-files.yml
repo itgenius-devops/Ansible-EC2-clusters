@@ -1,0 +1,30 @@
+- name: Phase 2 - Manage Files and Directories
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Create a file /tmp/devops.txt
+      file:
+        path: /tmp/devops.txt
+        state: touch
+
+    - name: Add text to the file using lineinfile
+      lineinfile:
+        path: /tmp/devops.txt
+        line: "This is my custom message."
+        create: yes
+
+    - name: Create a directory
+      file:
+        path: /tmp/devops_folder
+        state: directory
+
+    - name: Delete the file
+      file:
+        path: /tmp/devops.txt
+        state: absent
+
+    - name: Delete the directory
+      file:
+        path: /tmp/devops_folder
+        state: absent

@@ -1,0 +1,34 @@
+- name: Phase 6-8 - System facts, shell commands, and file downloads
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Gather full system info
+      setup:
+
+    - name: Get only OS distribution
+      setup:
+        filter: ansible_distribution
+
+    - name: Get IPv4 addresses
+      setup:
+        filter: ansible_all_ipv4_addresses
+
+    - name: Check disk space
+      shell: df -h
+
+    - name: List files in /etc
+      shell: ls -l /etc
+
+    - name: Get hostname
+      command: hostname
+
+    - name: Download a webpage
+      get_url:
+        url: https://www.google.com
+        dest: /tmp/google.html
+
+    - name: Set custom MOTD message
+      lineinfile:
+        path: /etc/motd
+        line: "Welcome to the Itgenius DevOps"
