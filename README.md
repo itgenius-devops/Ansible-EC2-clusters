@@ -16,7 +16,7 @@ Ansible-Playbooks/
 # Ansible Role Structure
 ```
 Ansible-Roles/
-├── hosts                         # Inventory file defining target instances
+├── hosts                         # Hosts or Inventory file defining target instances
 ├── playbook-1-ping.yml           # Playbook for pinging a specific host using a role
 ├── playbook-2-files.yml          # Playbook for managing files on another host using a role
 ├── roles/
